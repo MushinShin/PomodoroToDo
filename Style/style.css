@@ -1,0 +1,17 @@
+:root {
+    --color-work: #fff000;
+    --color-break: #49b675;
+    --color-clock: #5c5577;
+    --color-body: #918ca4;
+}
+
+/* Typography */
+/* Font-size is set to 62.5% so its easier to work with */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Inter, Arial, Arial, Helvetica, sans-serif;
+
+}
