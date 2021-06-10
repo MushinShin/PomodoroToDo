@@ -1,11 +1,18 @@
-//Define vars to hold values
+// Assigns onclick event to button elements in html
+const startStopp = document.getElementById("startStop");
+const resett = document.getElementById("reset");
+
+startStopp.onclick = startStop;
+resett.onclick = reset;
+
+//Define variables to hold values
 let seconds = 0;
 let minutes = 0;
 
-//Define var to hold setInterval()
+//Define variables to hold setInterval()
 let interval = null;
 
-// Define var to hold stopwatch status
+// Define variables to hold stopwatch status
 let status = "stopped";
 
 //StopWatch Function(logic)
@@ -19,11 +26,11 @@ function StopWatch() {
 
     }
 
-    //If seconds/minutes/hours are only one digit, add a leading 0
+    //If seconds/minutes are only one digit, add a leading 0
     const getFormattedNumber = number => (number > 10 ? number : `0${number}`);
 
     //Display updated time values to user
-    displayElement.innerHTML = `${getFormattedNumber(minutes)}:${getFormattedNumber(seconds)}`;
+    counterElement.innerHTML = `${getFormattedNumber(minutes)}:${getFormattedNumber(seconds)}`;
 }
 
 
@@ -31,7 +38,7 @@ function startStop() {
     if (status === "stopped") {
 
         // Start the Stopwatch by calling setInterval() function
-        interval = window.setInterval(StopWatch, 100);
+        interval = window.setInterval(StopWatch, 1000);
         document.getElementById("startStop").innerHTML = "Stop";
         status = "started";
     }
@@ -45,12 +52,13 @@ function startStop() {
 
 // Function to Reset StopWatch
 function reset() {
-
     window.clearInterval("interval");
     seconds = 0;
     minutes = 0;
-    document.getElementById("displayElement").innerHTML = "00:00";
+    document.getElementById("counterElement").innerHTML = "00:00";
     document.getElementById("startStop").innerHTML = "start";
 }
+
+
 
 
