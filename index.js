@@ -2,6 +2,7 @@
 const startStopp = document.getElementById("startStop");
 const resett = document.getElementById("reset");
 
+// Calls the functions when the users clicks the buttons
 startStopp.onclick = startStop;
 resett.onclick = reset;
 

@@ -13,17 +13,24 @@
     <title>PomotoDoro</title>
 </head>
 <body>
-    <div class="timer--container">
+    <div class="container">
 
-        <div id="display" class="timer">
+        <div class="butto--container">
+            <button class="butto butto--comand">Pomodoro</button>
+            <button class="butto butto--comand">Break</button>
+            <button class="butto butto--comand">Long Break</button>
+        </div>
+
+        <div id="counterElement" class="clock">
             00:00
         </div>
-        
-        <div class="butto--timer">
-            <div id="startStop" onclick="startStop()" class="butto butto--start ">Start</div>
-            <div id="reset" onclick="reset()" class="butto butto--start ">Reset</div>
+
+        <div class="butto--container">
+            <button id="startStop" class="butto butto--timer">Start</button>
+            <button id="reset" class="butto butto--timer">Reset</button>
         </div>
-        
+
     </div>
+    <script src="index.js"></script>
 </body>
 </html>

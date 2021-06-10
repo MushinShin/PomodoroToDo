@@ -1,3 +1,4 @@
+
 :root {
     --color-primary: #fdce2a;
     --color-secondary: #7b9c2c;
@@ -5,6 +6,7 @@
     --color-body: #ffffff;
 
     --color-shadow: #58701e;
+    --color-square: #455a14;
     --border-radius: 30px;
 }
 
@@ -12,94 +14,67 @@
 /* Font-size is set to 62.5% so its easier to work with */
 html {
     font-size: 62.5%;
-}
+} 
 
 body {
-    background-color: var(--color-shadow);
     color: var(--color-body);
-    font-family: Inter, Arial, Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Helvetica, sans-serif;
+    font-size: 2.4rem;
     line-height: 1.5;
-}
+} 
 
 *, *::after, *::before {
     box-sizing: border-box;
-}
+}  
 
+/* ------ Buttons ------ */
+/* .butto--container {
+    display: flex;
+    flex-direction: row;
+} */
 
-/* ----- Buttons ----- */
 .butto {
-    border-radius: var(--border-radius);
-    border: 0;
     cursor: pointer;
-    font-size: 1.8rem;
-    font-weight: 500;
+    border: 0;
+    font-weight: 600;
+    color: #fff;
+    margin: 0.5rem 0;
     padding: 1rem 4vw;
-    margin: auto;
-    text-transform: uppercase;
-    white-space: nowrap;
-    
 }
 
-.butto--start {
+.butto--timer {
+    border-radius: var(--border-radius);
+    font-size: 2.5rem;
+    flex-grow: 1;
     background-color: var(--color-secondary);
-    border-color: var(--color-primary);
-    border: 0;
     box-shadow: var(--color-shadow) 0px 6px 0px;
-    color: var(--color-clock);
-    display: inline-block;
-    margin-bottom: 2rem;
-    text-align: center;
+    text-transform: uppercase;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
-    width: 200px;
-}
-
-.butto--start:hover {
-    background-color: var(--color-shadow);
-}
-
-@media screen and (min-width: 1024px) {
-    .butto {
-        font-size: 1.5rem;
-    }
-    
-
 }
 
 .butto--comand {
     background-color: var(--color-shadow);
-    border-radius: 20px;
-    font-size: 1.8rem;
-    margin: 5px;
-    padding: 4px 12px;
-    text-transform: capitalize;
+    border-radius: 0.8rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding: 0.5rem 1rem;
 }
 
-.butto--timer {
-    width: 100%;
-    text-align: center;
+/* ------ Clock ------ */
+.clock {
+    margin: 0;
+    font-size: 15rem;
+    font-weight: 600;
 }
 
-
-/* ----- Timer ----- */
-.timer { 
-    font-size: 72px;
-    margin: 0px auto;
-    text-align: center;
-    padding-top: 5rem;
-    width: 100%;
+.container {
+    background-color: var(--color-square);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-
-.timer--container {
-    height: 300px;
-    width: auto;
-    margin-left: 50vh;
-    margin-right: 50vh;
-    margin-top: 10rem;
-    background-color: #607e1c;
-}
-
-
-
-
 
