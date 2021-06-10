@@ -1,10 +1,10 @@
 // Assigns onclick event to button elements in html
-const startStopp = document.getElementById("startStop");
-const resett = document.getElementById("reset");
+const starTimerBtn = document.getElementById("startStop");
+const resetTimerBtn = document.getElementById("reset");
 
 // Calls the functions when the users clicks the buttons
-startStopp.onclick = startStop;
-resett.onclick = reset;
+starTimerBtn.onclick = startStop;
+resetTimerBtn.onclick = reset;
 
 //Define variables to hold values
 let seconds = 0;
