@@ -2,10 +2,6 @@
 let seconds = 0;
 let minutes = 0;
 
-//Define vars to hold display value
-let displaySeconds = 0;
-let displayMinutes = 0;
-
 //Define var to hold setInterval()
 let interval = null;
 
