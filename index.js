@@ -24,11 +24,10 @@ function StopWatch() {
     }
 
     //If seconds/minutes/hours are only one digit, add a leading 0
-    (seconds < 10) ? displaySeconds = "0" + seconds.toString() : displaySeconds = seconds;
-    (minutes < 10) ? displayMinutes = "0" + minutes.toString() : displayMinutes = minutes;
+    const getFormattedNumber = number => (number > 10 ? number : `0${number}`);
 
     //Display updated time values to user
-    document.getElementById("display").innerHTML = displayMinutes + ":" + displaySeconds;
+    displayElement.innerHTML = `${getFormattedNumber(minutes)}:${getFormattedNumber(seconds)}`;
 }
 
 
@@ -36,7 +35,7 @@ function startStop() {
     if (status === "stopped") {
 
         // Start the Stopwatch by calling setInterval() function
-        interval = window.setInterval(StopWatch, 1000);
+        interval = window.setInterval(StopWatch, 100);
         document.getElementById("startStop").innerHTML = "Stop";
         status = "started";
     }
@@ -54,7 +53,7 @@ function reset() {
     window.clearInterval("interval");
     seconds = 0;
     minutes = 0;
-    document.getElementById("display").innerHTML = "00:00";
+    document.getElementById("displayElement").innerHTML = "00:00";
     document.getElementById("startStop").innerHTML = "start";
 }
 
