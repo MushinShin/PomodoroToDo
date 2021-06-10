@@ -13,7 +13,11 @@ let minutes = 0;
 let interval = null;
 
 // Define variables to hold stopwatch status
-let status = "stopped";
+const Status_Types = {
+    STOPPED: 0,
+    STARTED: 1
+}
+let status = Status_Types.STOPPED;
 
 //StopWatch Function(logic)
 function StopWatch() {
@@ -35,18 +39,18 @@ function StopWatch() {
 
 
 function startStop() {
-    if (status === "stopped") {
+    if (status === Status_Types.STOPPED) {
 
         // Start the Stopwatch by calling setInterval() function
         interval = window.setInterval(StopWatch, 1000);
         document.getElementById("startStop").innerHTML = "Stop";
-        status = "started";
+        status = 1;
     }
 
     else {
         window.clearInterval(interval);
         document.getElementById("startStop").innerHTML = "Start";
-        status = "stopped";
+        status = 0;
     }
 }
 
