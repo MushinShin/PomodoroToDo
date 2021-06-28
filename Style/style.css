@@ -4,6 +4,9 @@
     --color-secondary: #7b9c2c;
     --color-clock: rgb(219, 209, 64);
     --color-body: #ffffff;
+    --color-breakContainer: #1a5f63;
+    --color--breakComand: #27969c;
+    --color--breakTimer: #3468d6;
 
     --color-shadow: #58701e;
     --color-square: #455a14;
@@ -40,6 +43,7 @@ body {
     color: #fff;
     margin: 0.5rem 0;
     padding: 1rem 4vw;
+    transition: all 1s;
 }
 
 .butto--timer {
@@ -51,6 +55,7 @@ body {
     text-transform: uppercase;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
+    transition: all 1s;
 }
 
 .butto--comand {
@@ -60,6 +65,28 @@ body {
     font-weight: bold;
     margin-bottom: 0;
     padding: 0.5rem 1rem;
+    transition: all 1s;
+}
+
+.break--timer {
+    background-color: var(--color--breakComand);
+    box-shadow: var(--color--breakTimer) 0px 6px 0px;
+    transition: all 1s;
+}
+
+.break--container {
+    background-color: var(--color-breakContainer);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: all 1s;
+}
+
+.break--comand {
+    background-color: var(--color--breakComand);
+    transition: all 1s;
 }
 
 /* ------ Clock ------ */
@@ -70,11 +97,12 @@ body {
 }
 
 .container {
-    background-color: var(--color-square);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: var(--color-square);
     align-items: center;
     height: 100vh;
+    transition: all 1s;
 }
 

@@ -3,7 +3,8 @@
 const Button_Labels = {
     Start: "Start",
     Stop: "Stop",
-    Reset: "Reset"
+    Reset: "Reset",
+    break: "break"
 }
 
 // Define variables to hold stopwatch status
